@@ -2,9 +2,7 @@
 
 using namespace std;
 
-// Iterator is a class wrapper for the iterator object found in the <iterator>
-// class
-
+// Iterator is a class wrapper for the iterator object found in the <iterator> class
 // return the last iterator element
 Iterator unique(Iterator first, Iterator last) {
   // check if it's not empty
@@ -33,8 +31,7 @@ Iterator unique(Iterator first, Iterator last) {
     // move to the next elememt
     current_element++;
   }
-
   return last;
 }
 
-int main() { std::cout << "Hello World!\n"; }
+int main() { return 0; }
