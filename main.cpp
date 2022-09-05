@@ -15,23 +15,20 @@ Iterator unique(Iterator first, Iterator last) {
   while (current_element != last) {
     // go through the list and remove duplicates
     // starts to check from the second element from the current one
+    //remove all the consecutive duplicates
     Iterator search = current_element++;
-    while (search += last) {
-      // if current element is equals to search then it is a duplicate
-      // remove it by assigning search to the next element after search
-      if (*current_element == *search) {
-        search = search++;
-      }
-      // if it is not equal then move to the next element
-      else {
-        search++;
-      }
+    while (search ! = last && *current_element == *search) {
+      //if they are equal - duplicates
+      //remove them by assinging the item that follows current to the next item after search
+      current_element++ = search++;
     }
     // after removing all the duplicates of the current element
     // move to the next elememt
     current_element++;
   }
-  return last;
+
+  //current_element is the new last element
+  return current_element;
 }
 
 int main() { return 0; }
